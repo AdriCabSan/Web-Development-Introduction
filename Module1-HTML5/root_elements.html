@@ -1,0 +1,23 @@
+Base de los enlaces: <base><base>
+
+El elemento vacío <base> contiene una URL (mediante un atributo href) que sirve de referencia para el resto de URLs enlazadas en el resto del documento. Este elemento no se suele utilizar apenas.
+Enlaces: <link><link>
+
+Los elementos vacíos <link> enlazan a otros documentos para diferentes fines. El uso más habitual es para enlazar a hojas de estilo, aunque puede tener muchos usos.
+Este es un ejemplo de enlace <link> a una hoja de estilo:
+<link rel="stylesheet" href="estilo.css">
+Nota: En versiones anteriores de HTML, los enlaces a las hojas de estilo debían contener el atributo type con el valor text/css, el tipo MIME correspondiente a las hojas de estilo, pero en HTML 5 no es necesario incluir este atributo.
+
+Este es un ejemplo de enlace <link> a un favicon:
+<link rel="icon" href="favicon.ico">
+
+Meta: <meta><meta>
+Los elementos vacíos <meta> no tienen un propósito definido. Pueden contener cualquier tipo de información, pero el agente que recibe la página web debe ser capaz de interpretar esa información.
+Algunos elementos <meta> son interpretados correctamente por todos los agentes, por ejemplo el que indica el juego de caracteres de la página web:
+<meta charset="utf-8">
+
+Otra etiqueta <meta> cuyo uso se ha extendido en los últimos años es la que indica a los sistemas de pantallas de alta densidad que deben usar como ancho del documento el ancho de pantalla del dispositivo.
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+Propiedades de estilo: <style><style>
+El elemento <style> permite incluir en una página web declaraciones de estilo que se a
