@@ -1,0 +1,25 @@
+n {
+  font-family: Tahoma;
+}
+/* color for all paragraphs */
+p {	color: #808080; }
+
+.primary { color: black; }
+
+/* Spacehips div p specificity test */
+div#main div.spaceships p { color: grey; }
+div.spaceships p { color: red; }
+h3 ~ p { color: yellow; }
+div div p { color: blue; }
+
+/* Spacehips div p.primary specificity test */
+div#main div.spaceships p.primary { color: darkkhaki; }
+div.spaceships p.primary { color: darkslategray; }
+h3 ~ p.primary { color: chocolate; }
+div div p.primary { color: aqua; }
+
+/* Are IDs or Classes more specific? */
+#pink { color: #FF1493; }
+.red { color: #FF4500; }
+
+/* .primary { color: blue !important } */

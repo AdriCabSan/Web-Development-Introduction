@@ -1,0 +1,86 @@
+h1 { 
+    color: red; 
+    padding: 10px; 
+    text-decoration: underline; 
+}
+
+
+* {
+    color: green;
+    font-size: 20px;
+    line-height: 25px;
+ }
+
+ #container * {
+    border: 1px solid black;
+   }
+
+   #container {
+    width: 960px;
+    margin: auto;
+ }
+
+ .container {
+    width: 960px;
+    margin: auto;
+ }
+
+   div#container p{
+    font-weight:bold;
+    }
+
+a:link { color: red; }
+a:visted { color: purple; }
+
+div#container > p {
+        border: 1px solid black;
+}
+
+div + p {  
+        color: green;  
+     } 
+
+div ~ p{
+        background-color:blue;
+} 
+
+
+     
+
+@page :first {
+    margin: 1in;
+  }
+  
+  /* iPhone in Portrait and Landscape */
+@media only screen 
+and (min-device-width: 320px) 
+and (max-device-width: 480px)
+and (-webkit-min-device-pixel-ratio: 2) {
+
+  .module { width: 100%; }
+}
+
+
+@media print {
+
+}
+
+@font-face {
+    font-family: 'MyWebFont';
+    src:  url('myfont.woff2') format('woff2'),
+          url('myfont.woff') format('woff');
+  }
+
+  @keyframes pulse {
+    0% {
+      background-color: #001f3f;
+    }
+    100% {
+      background-color: #ff4136;
+    }
+  }
+  
+  @[KEYWORD] {
+    /* Nested Statements */
+  }
+  

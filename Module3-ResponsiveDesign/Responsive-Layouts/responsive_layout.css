@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css?family=Mukta+Malar:300,700');
+ *, *::before, *::after {
+	 box-sizing: border-box;
+}
+ body {
+	 font-family: 'Mukta Malar', sans-serif;
+	 font-weight: 300;
+	 line-height: 1.6;
+	 font-size: 18px;
+	 padding-top: 3em;
+}
+ section {
+	 padding: 12vh;
+	 width: 80%;
+	 max-width: 960px;
+	 margin: 0 auto;
+	 box-shadow: 0 0.5em 2em rgba(0, 0, 0, .3);
+	 margin-bottom: 3em;
+}
+ .card {
+	 margin: 1.5%;
+	 width: 30%;
+	 text-align: center;
+	 background: white;
+	 border: 1px solid black;
+}
+ .card img {
+	 max-width: 100%;
+}
+ .card p {
+	 padding: 0.5em;
+	 margin: 0;
+}
+ .sidebar {
+	 background: #4d7c8a;
+	 color: rgba(255, 255, 255, .9);
+	 padding: 1em;
+}
+ .main {
+	 background: #e4fde1;
+	 color: #333;
+	 padding: 1em;
+}
+ footer {
+	 background: #476a6f;
+	 color: white;
+	 padding: 1em;
+}
+ .float-intro img {
+	 float: right;
+	 margin-left: 1em;
+}
+ .float-multiple {
+	 min-height: 100vh;
+}
+ .float-multiple .float {
+	 height: 150px;
+	 width: 150px;
+	 background: pink;
+	 border: 2px solid red;
+	 float: left;
+}
+ .clearfix::after {
+	 display: table;
+	 content: '';
+	 clear: both;
+}
+ .float-layout-one {
+	 background: #a9e5bb;
+}
+ .float-layout-one .col {
+	 width: 30%;
+	 margin-right: 3%;
+	 float: left;
+}
+ .float-layout-two .sidebar--left {
+	 width: 25%;
+	 float: left;
+}
+ .float-layout-two .main {
+	 width: 50%;
+	 float: left;
+}
+ .float-layout-two .sidebar--right {
+	 width: 25%;
+	 float: right;
+}
+ .float-layout-two footer {
+	 clear: both;
+}
+ .float-layout-three {
+	 background: #e4fde1;
+	 min-height: 100vh;
+}
+ .flex-layout-one .flex-parent {
+	 display: flex;
+}
+ .flex-layout-one .flex-parent .card {
+	 width: 100%;
+}
+ .flex-layout-two .flex-parent {
+	 display: flex;
+	 flex-wrap: wrap;
+}
+ .flex-layout-two .flex-parent .card {
+	 width: 20%;
+}
+ .grid-layout-one .card {
+	 width: 100%;
+}
+ .grid-layout-one .grid-parent {
+	 display: grid;
+	 grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+	 grid-gap: 1em;
+}
+ .grid-layout-two {
+	 display: grid;
+	 grid-template-columns: 1fr 4fr 1fr;
+}
+ .grid-layout-two .title {
+	 grid-column: -1;
+}
+ .grid-layout-two footer {
+	 grid-column: -1;
+}
+ 

@@ -1,0 +1,75 @@
+
+<!-- We can use the `class` for styling in CSS, and we've also make this into a landmark region -->
+<div class="names" role="region" aria-label="Names"></div>
+What is discouraged is making up your own attributes, or repurposing existing attributes for unrelated functionality.
+
+<!-- `highlight` is not an HTML attribute -->
+<div highlight="true"></div>
+
+<!-- `large` is not a valid value of `width` -->
+<div width="large">
+HTML elements can have attributes on them that are used for anything from accessibility information to stylistic control.
+
+
+
+What not to do with data attributes
+Store content that should be accessible. If the content should be seen or read on a page, don’t only put them in data attributes, but make sure that content is in the HTML content somewhere.
+
+<!-- This isn't accessible content -->
+<div data-name="Chris Coyier"></div>
+
+<!-- If you need programmatic access to it but shouldn't be seen, there are other ways... -->
+<div>
+  <span class="visually-hidden">Chris Coyier</span>
+</div>
+
+
+
+<style>
+/* Select any element with this data attribute and value */
+[data-size="large"] {
+  padding: 2rem;
+  font-size: 125%;
+}
+
+/* You can scope it to an element or class or anything else */
+button[data-type="download"] { }
+.card[data-pad="extra"] { }
+
+/* Selects if the attribute is present at all */
+[data-size] { }
+
+/* Selects if the attribute has a particular value */
+[data-state="open"],
+[aria-expanded="true"] { }
+
+/* "Starts with" selector, meaning this would match "3" or anything starting with 3, like "3.14" */
+[data-version^="3"] { }
+
+/* "Contains" meaning if the value has the string anywhere inside it */
+[data-company*="google"] { }
+
+Case-insensitive attribute values
+In case you’re needing to correct for possible capitalization inconsistencies in your data attributes, the attribute selector has a case-insensitive variant for that.
+
+/* Will match
+<div data-state="open"></div>
+<div data-state="Open"></div>
+<div data-state="OPEN"></div>
+<div data-state="oPeN"></div>
+*/
+[data-state="open" i] { }
+
+It’s the little i within the bracketed selector.
+
+Using data attributes visually
+CSS allows you to yank out the data attribute value and display it if you need to.
+
+/* <div data-emoji="✅"> */
+
+[data-emoji]::before {
+  content: attr(data-emoji); /* Returns '✅' */
+  margin-right: 5px;
+}
+
+</style>

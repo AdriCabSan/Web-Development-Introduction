@@ -1,0 +1,22 @@
+html {
+    background: #333;
+  }
+  
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .module {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    width: 800px;
+  }
+  
+  @media screen and (max-width: 500px) {
+    .module {
+      width: 300px;
+    }
+  }

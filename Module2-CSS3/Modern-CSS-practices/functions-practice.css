@@ -1,0 +1,27 @@
+:root {
+    --transition-duration-short: 125ms;
+    --transition-duration-long: 200ms;
+}
+.has-orange-glow {
+    filter: drop-shadow(0.25rem 0 2rem var(--color-jaffa));
+    transition: filter var(--transition-duration-long) ease-in-out;
+}
+.css-tricks-logo {
+    width: 55vw;
+    transition: filter var(--transition-duration-long) ease-in-out;
+}
+body {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+img {
+    height: auto;
+    max-width: 100%;
+    padding-bottom: var(--size-delta);
+}
+.button {
+    position: absolute;
+    bottom: var(--size-epsilon);
+}

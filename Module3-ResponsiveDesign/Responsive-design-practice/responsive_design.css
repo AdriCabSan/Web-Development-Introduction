@@ -1,0 +1,16 @@
+html {
+    background: #333;
+  }
+  
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .module {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    width: 80%;
+  }

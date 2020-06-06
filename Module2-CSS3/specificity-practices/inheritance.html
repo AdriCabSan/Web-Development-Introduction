@@ -1,0 +1,79 @@
+
+The very basic principle of inheritance is that properties with the value “inherit” will inherit its parent’s value for the same property into a computed value. Here’s a basic example:
+
+red text
+
+<p style="color: red; border: 1px solid #000;">
+    <q><span>red text</span></q>
+</p>
+
+<p style="font-size: 10px;">
+    <span style="font-size: 200%;">big text</span>
+</p>
+The property “font-size” with the value “10px” will be inherited into the <span> element. The span takes this value and sums up its property “font-size” by combining it with the inherited value. So the <span>’s property “font-size” will have the value 20px after the cascade.
+
+Some screen properties already have “inherit” as a default value, forcing themselves on children in the document tree. Here’s the list:
+
+border-collapse
+border-spacing
+caption-side
+color
+cursor
+direction
+empty-cells
+font
+font-family
+font-stretch
+font-size
+font-size-adjust
+font-style
+font-variant
+font-weight
+letter-spacing
+line-height
+list-style
+list-style-image
+list-style-type
+quotes
+text-align
+text-indent
+text-transform
+white-space
+word-spacing
+
+
+
+
+We set up some cascading examples here as a reference. Here is the sample HTML used for the test:
+
+<p class="pclass" id="pid">
+    <span class="sclass" id="sid">text</span>  rojo 1fuente de 15px
+    <span  id="no">text</span> rojo  fuente de 10px
+</p>
+
+Here are some CSS scenarios that could reside inside the style sheet with results explained:
+
+span#sid { color: red; }
+#pid span { color: green; }
+
+The text will be rendered green. Both styles carry the same weight (one id, one tag) but the green value is last defined.
+
+#pid #sid { color: red; }
+p.pclass span#sid.sclass { color: green; }
+
+The text will be rendered red. The first definition has two id’s, (weight 200) and second has one id, 
+two tag names and two class attributes (122).
+
+#pid { color: red !important; }
+span { color: green; }
+The text will be rendered green. Even if the first definition is #id-specified with !important and colour will be inherited, targeting elements further down the document tree wins.
+
+#pid { color: blue; font-size: 10px; }
+#pid span { color: red !important;}
+p #sid { color: green; font-size: 150%; }
+
+
+The text will be rendered red in 15px size.
+ Both definitions carry the same weight as default, but red wins the colour battle for its !important rule. 
+ The span will inherit the #pid defined font-size: 10px; and combine it with it’s own 150%. 
+ The result will be 10×1.5=15px.

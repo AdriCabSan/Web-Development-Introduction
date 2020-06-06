@@ -29,11 +29,16 @@ Sólo asegúrate de comprobar la licencia de cada fuente que descargues antes de
 * [dillinger](https://dillinger.io/) - Editor de lenguaje markdown para documentacion en repositorios,exporta e importa HTML,PDF,MD para edicion o descarga
 * [specificity calculator](https://specificity.keegan.st/) - 
 * [specificity visualizer](https://isellsoap.github.io/specificity-visualizer/) - Visualizador de especificidad de tu documento 
+* [PageSpeed Tools](https://developers.google.com/speed/docs/insights/MinifyResources?hl=es) - Recursos generales para optimizar los recursos de tu pagina y que su tiempo de carga sea mas rapida.
+
 * [CSS normalize](http://necolas.github.io/normalize.css/) -minificador de CSS
 * [Webpack](https://webpack.js.org/) - bundler para empaquetar y minificar un proyecto entero de javascript(avanzado)
-
+* [CSSGR.ID](https://cssgr.id/) - Herramienta para practicar la creacion de CSS grids,de forma interactiva
 ### Hosting/deploying
-* [netlify](https://www.netlify.com/) - plataforma para desplegar y hostear un sitio web estatico
+* [Netlify](https://www.netlify.com/) - plataforma para desplegar y hostear un sitio web estatico
+### Responsive Design
+[responsivedesign.is](https://responsivedesign.is/) -blog of responsive design trends,tutorials,etc
+[This is responsive design](https://bradfrost.com/blog/post/this-is-responsive/) - Todo lo que puedas encontrar sobre responsive design,por el creador de esta tendencia,tambien ofrece tutoriales y librerias de patrones para desarrollar tu sitio responsivo
 
 ### Referencias a recursos
 Para poder visualizar los iconos o utilizar cualquier recurso en nuestros proyectos es necesario saber referenciarlos en nuestro proecto para poderlos usar,aqui se dejan ejemplos de como referenciarlos:
