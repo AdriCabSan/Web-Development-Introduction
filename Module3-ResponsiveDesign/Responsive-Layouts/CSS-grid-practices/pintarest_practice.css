@@ -1,0 +1,26 @@
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 250px);  
+    grid-gap: 5px;
+    justify-content: center;
+}
+.item {
+    border-radius: 5px;
+    padding: 10px;
+    background: #f2f2f2;
+}
+.item img {
+    max-width: 100%;
+}
+
+.level-1{
+    /*nivel 1 tiene un tamaño de 3 filas,si quiero que su inicio sea dinamico,donde grid lo decida,se pone end*/
+    grid-row-end: span 3;
+}
+.level-2{
+    grid-row-end: span 2;
+}
+.level-3{
+    grid-row-end: span 1;
+
+}

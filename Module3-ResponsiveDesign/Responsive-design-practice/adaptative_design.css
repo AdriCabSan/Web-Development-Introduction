@@ -20,3 +20,9 @@ html {
       width: 300px;
     }
   }
+
+  @media print{
+    .module {
+      background-color: aquamarine;
+    }
+  }
