@@ -1,0 +1,120 @@
+*{
+    box-sizing: border-box;
+}
+svg {
+    width: 300px;
+    display: block;
+    position: absolute;
+}
+svg .path {
+    stroke-dasharray: 320;
+    stroke-dashoffset: 0;
+    animation: dash 3s ease-in-out infinite;
+}
+
+.svg1 {
+    position: absolute;
+    margin-top: 1rem;
+    margin-left: 25rem;
+}
+
+.container{
+    position: absolute;
+    align-items: center;
+    margin-left: 6rem;
+    display: inline-block;
+}
+
+
+/*Curva 2*/
+.svg2{
+    position: absolute;
+    margin-top: 15rem;
+    margin-left: 25rem;
+}
+
+.container2 {
+    position: absolute;
+    margin: 12rem;
+    display: inline-block;
+
+}
+svg .line1 {
+    stroke-dasharray: 340;
+    stroke-dashoffset: 40;
+    animation: dash1 1.5s ease alternate infinite;
+}
+svg .line2 {
+    stroke-dasharray: 320;
+    stroke-dashoffset: 320;
+    animation: dash2 1.5s ease-out alternate infinite;
+}
+
+/*Curva 3*/
+.svg3{
+    position: absolute;
+    margin-top: 33rem;
+    margin-left: 49.7rem;
+}
+.ball {
+    width: 10px;
+    height: 10px;
+    background-color: red;
+    border-radius: 50%;
+    
+    offset-path: path('M10 80 Q 77.5 10, 145 80 T 280 80');
+    offset-distance: 0%;
+  
+    animation: red-ball 2s linear alternate infinite;
+  }
+  
+.container3 {
+    position: absolute;
+    margin: 24rem;
+    display: inline-block;
+    text-align: center;
+}
+.container3 :nth-child(2){
+    white-space: nowrap;
+}
+
+/*fotogramas*/
+
+/*curva1*/
+@keyframes dash {
+    from {
+        stroke-dashoffset: 320;
+   }
+    to {
+        stroke-dashoffset: 0;
+   }
+}
+
+/*curva2*/
+@keyframes dash1 {
+    from {
+        stroke-dashoffset: 360;
+   }
+    to {
+        stroke-dashoffset: 40;
+   }
+}
+
+@keyframes dash2 {
+    from {
+        stroke-dashoffset: 280;
+   }
+    to {
+        stroke-dashoffset: -40;
+   }
+}
+
+/*curva3*/
+@keyframes red-ball {
+    from {
+      offset-distance: 0%;
+    }
+    to {
+      offset-distance: 100%;
+    }
+  }

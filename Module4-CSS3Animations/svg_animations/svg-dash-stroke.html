@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="svg-dash-stroke.css">
+</head>
+<body>
+    <div class="container">
+        <p>Como puedes ver, la curva siempre está ahí. 
+        Sólo cambiamos el desplazamiento del guión para que la parte punteada aparezca poco a poco.
+        </p>
+    </div>
+
+    <div class= "container2">
+        <p>Puedes llevar esto un paso más allá usando el mismo principio pero con más caminos:</p>
+    </div>
+
+    <div class= "container3">
+        <p>usando offset path y offset distance:</p>
+
+        <p>Como pueden ver, tenemos un nuevo elemento div.ball. Este elemento puede ser cualquier cosa,
+            un div, una imagen, un texto, lo que sea.  
+        </p>
+
+        <p> 
+        La idea en este ejemplo es que con el uso de la trayectoria y la distancia de desplazamiento 
+        puedes darle al elemento un camino a seguir y animar la distancia y el elemento se moverá a través del camino.
+        </p>
+
+    </div>
+
+<div class="svg1">
+    <svg width="300px" height="175px" version="1.1">
+        <path fill="transparent" stroke="#000000" stroke-width="4" d="M10 80 Q 77.5 10, 145 80 T 280 80" class="path"></path>
+    </svg>
+</div>
+
+<div class="svg2">
+    <svg width="300px" height="175px" version="1.1">
+        <path fill="transparent" stroke="#000000" stroke-width="4" d="M10 80 Q 77.5 10, 145 80 T 280 80" class="path"></path>
+        <path fill="transparent" stroke="#FF2851" stroke-width="4" d="M10 80 Q 77.5 10, 145 80 T 280 80" class="line2"></path>
+        <path fill="transparent" stroke="#000000" stroke-width="4" d="M10 80 Q 77.5 10, 145 80 T 280 80" class="line1"></path>
+      </svg>
+</div>
+
+<div class="svg3">
+    <svg width="300px" height="175px" version="1.1">
+        <path fill="transparent" stroke="#888888" stroke-width="1" d="M10 80 Q 77.5 10, 145 80 T 280 80" class="path"></path>
+    </svg>
+    
+    <div class="ball"></div>
+</div>
+
+</body>
+</html>
