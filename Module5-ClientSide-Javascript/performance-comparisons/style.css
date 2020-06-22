@@ -1,0 +1,34 @@
+html, body {
+    min-height: 100%;
+}
+
+body {
+    margin: 0; 
+    min-height: 100vh;
+}
+
+body {
+	font-family: Arial;
+}
+
+#main {
+    margin: 5%;
+    padding: 2%;
+    min-width: 86%;
+    min-height: 80vh;
+    background-color: beige;
+    border-radius: 5px;
+    
+    position: relative;
+}
+
+div, p {
+    margin: 5px;
+}
+
+#notes {
+    font-style: italic;
+    position: absolute;
+    font-size: smaller;
+    bottom: 10px;
+}

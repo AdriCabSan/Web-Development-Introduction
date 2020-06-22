@@ -1,0 +1,51 @@
+<!-- Sometimes, you'll come across a situation where you want to stop an event doing what it does by default. 
+The most common example is that of a web form, for example, a custom registration form. 
+When you fill in the details and press the submit button, the natural behaviour is for the data to be submitted 
+to a specified page on the server for processing, and the browser to be redirected to a "success message" page 
+of some kind (or the same page, if another is not specified.)
+
+The trouble comes when the user has not submitted the data correctly — as a developer, 
+you'll want to stop the submission to the server and give them an error message telling them 
+what's wrong and what needs to be done to put things right. Some browsers support automatic 
+form data validation features, but since many don't, you are advised to not rely on those and 
+implement your own validation checks. Let's look at a simple example. -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <div>
+          <label for="fname">First name: </label>
+          <input id="fname" type="text">
+        </div>
+        <div>
+          <label for="lname">Last name: </label>
+          <input id="lname" type="text">
+        </div>
+        <div>
+           <input id="submit" type="submit">
+        </div>
+      </form>
+      <p></p>
+    <script>
+    var form = document.querySelector('form');
+    var fname = document.getElementById('fname');
+    var lname = document.getElementById('lname');
+    var submit = document.getElementById('submit');
+    var para = document.querySelector('p');
+
+form.onsubmit = function(e) {
+  if (fname.value === '' || lname.value === '') {
+    e.preventDefault();
+    para.textContent = 'You need to fill in both names!';
+  }
+}
+    </script>    
+</body>
+</html>
