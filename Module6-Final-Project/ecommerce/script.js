@@ -1,13 +1,12 @@
 const cartBtn = document.querySelector(".cart-btn")
-const closeCartBtn = document.querySelector(".close-cart")
-const clearCartBtn = document.querySelector(".clear-cart")
+const closeCartButton = document.querySelector(".close-cart")
+const clearCartButton = document.querySelector(".clear-cart")
 const cartDOM = document.querySelector(".cart")
 const cartOverlay = document.querySelector(".cart-overlay")
 const cartItems = document.querySelector(".cart-items")
 const cartTotal = document.querySelector(".cart-total")
 const cartContent = document.querySelector(".cart-content")
 const productsDOM = document.querySelector(".products-center")
-
 let cartItemList = []
 
 class Product {
@@ -61,15 +60,50 @@ class UI {
         })
         productsDOM.innerHTML = result
     }
+
+    getBagButtons(){
+        //spread operator se usa aqui para convertir el nodelist
+        //de querySelectorAll a un array
+        const buttons = [...document.querySelectorAll(".bag-btn")]
+        let button_id = buttons.forEach(button => {
+            let id = button.dataset.id
+            let inCart = cartItemList.find(item =>  item.id === id)
+            // si el item ya esta en el carrito
+            if(inCart){
+                button.innerText = "In Cart"
+                button.disabled = true
+            }
+            else {
+                button.addEventListener('click',(event) => {
+                    event.target.innerText = "In Cart"
+                    event.target.disabled = true
+                    //obtener el producto de productos
+                    //añadir el producto al carrito
+                    //guardar el carrito en el local storage  
+                    //setear los valores del carrito 
+                    // mostrar item del carrito
+                    // mostrar el carrito
+                })
+            }
+        })
+    }
+}
+class CartController{
+
 }
 
 class Storage {
-
+  
 }
 document.addEventListener("DOMContentLoaded", () => {
     const ui = new UI()
     const products = new Product()
 
     products.getProducts()
-    .then(products => ui.displayProducts(products))
+    .then(products => {
+        ui.displayProducts(products)
+        Storage.saveProducts(products)
+    }).then(() => {
+        ui.getBagButtons()
+    })
 })
