@@ -1,0 +1,13 @@
+.toggle-content {
+	display: none;
+	height: 0;
+  opacity: 0;
+	overflow: hidden;
+	transition: height 350ms ease-in-out, opacity 750ms ease-in-out;
+}
+
+.toggle-content.is-visible {
+	display: block;
+	height: auto;
+  opacity: 1;
+}

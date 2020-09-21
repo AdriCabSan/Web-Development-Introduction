@@ -5,3 +5,4 @@ const baz = () => console.log("Third");
 bar();
 foo();
 baz();
+

@@ -16,7 +16,7 @@
   }
   
   [data-columns="3"] {
-    background: #9CCC65;
+    background: rgb(238, 255, 0);
     grid-template-columns: repeat(3, 1fr);
   }
   

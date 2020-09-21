@@ -145,7 +145,7 @@ class UI {
     }
     //usaremos event bubbling donde se incremente
     // o se decremente el numero de items de un item
-    //TODO ERROR ID IS UNDEFINED at remove-item button AND MSSES UP REFRESH STORAGE ARRAY
+    
     cartLogic(){
 
         clearCartButton.addEventListener('click',()=>{
