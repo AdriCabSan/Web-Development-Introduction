@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<link rel="stylesheet" href="./static/css/demo.css" type="text/css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script type="text/javascript" src="https://platform.linkedin.com/badges/js/profile.js" async defer></script>
+<span class="parpadea" align="center">I O S </span>
+<div id="mueve">
+<img src="./static/img/ios.jpg" >
+
+</div>
+{% block body %}
+{% if session['logged_in'] %}
+
+{% else %}
+
+
+<div>
+  <br/><br/><br/>
+  <br/><br/><br/>
+  <br/><br/><br/>
+  <h2 id="menu1">Soluciones</h2>
+  <ul>
+    <li><a href="#">Back-End</a></li>
+    <li><a href="#">Servidores</a></li>
+    <li><a href="#">Base de datos</a></li>
+    <li><a href="#">Servicios en la nube</a></li>
+    <li><a href="#">Análitica de datos</a></li>
+  </ul>
+</div>
+
+
+
+<div class="LI-profile-badge"  data-version="v1" data-size="large" data-locale="es_ES" data-type="horizontal" data-theme="dark" data-vanity="leobardo-rodríguez-cavazos-40b1b062"><a class="LI-simple-link" href='https://mx.linkedin.com/in/leobardo-rodr%C3%ADguez-cavazos-40b1b062?trk=profile-badge'>Leobardo Rodríguez Cavazos</a></div>
+
+ <footer class="site-footer" align="center">
+      <div  align="center">
+       
+          <div align="center">
+            <h6>Acerca de</h6>
+            <p >proyectoslym.com <i> SITIO DE DESARROLLO </i> 
+            Sitio construido con el propósito de mostrar funcionalidades 
+            </p>
+          </div>
+
+          </div>
+        <hr>
+      </div>
+      <div >
+        <div >
+          <div >
+            <p class="copyright-text"> IOS Lab UANL 2020 
+         <a href="#">IOS</a>.
+            </p>
+          </div>
+
+          <div >
+           
+         
+        </div>
+      </div>
+</footer>
+
+
+{% endif %}
+{% endblock %}
+{{endraw }}
+
+</html> 
