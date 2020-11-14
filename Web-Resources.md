@@ -1,6 +1,6 @@
 # Web Resources
 Lista de todos los sitios web que usaremos o pueden usar para el curso o proyectos personales
-
+* [General tools]: aqui hay una lista extensa de muchas fuentes de recursos extras a las mecionadas.
 ## Graphic Mockups
 Recursos visuales para sus sitios web:
 
@@ -77,4 +77,4 @@ url("https://yoursite.com/css/fonts/CustomFont.svg#filename") format("svg");
    [express]: <http://expressjs.com>
    [AngularJS]: <http://angularjs.org>
    [Gulp]: <http://gulpjs.com>
-   
+   [General Tools]: </https://www.keycdn.com/blog/web-development-tools>
